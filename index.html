@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/basic/favicon.ico" type="image/x-icon">
+    <title>CryptoPrice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F5F8FA;
+            z-index: 9998;
+            text-align: center;
+        }
+
+        .plane-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .card{
+        	margin-top: 5%;
+        }
+    </style>
+</head>
+<body class="light">
+<!-- Pre loader -->
+<div id="loader" class="loader">
+    <div class="plane-container">
+        <div class="preloader-wrapper small active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page ">
+    <header class="blue accent-3 relative nav-sticky">
+        <div class="container-fluid text-white">
+            <div class="row p-t-b-10 ">
+                <div class="col">
+                    <h4>
+                        <i class="icon-area-chart"></i>
+                        CryptoPrice
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+        
+            
+        <div class="row row-eq-height my-3">
+            
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <b>BITCOIN - BTC</b>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/1182-BTC.png" alt="User Image">
+                        </div>
+                        <div>
+                            <h2 class="price-display"><span class="price" id="PRICE_BTC"></span></h2>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong>ETHERUM - ETH</strong>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/7605-ETH.png" alt="User Image">
+                        </div>
+                        <div>
+                            <h2 class="price-display"><span class="price" id="PRICE_ETH"></span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong>NPCOIN - NPC</strong>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/34491-NPC.png" alt="User Image">
+                        </div>
+                        <div>
+                           <h2 class="price-display"><span class="price" id="PRICE_NPC"></span>                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong>RIPPLE - XRP</strong>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/5031-XRP.png" alt="User Image">
+                        </div>
+                        <div>
+                            <h2 class="price-display"><span class="price" id="PRICE_XRP"></span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong>EXCHANGE UNION - XUC</strong>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/184221-XUC.png" alt="User Image">
+                        </div>
+                        <div>
+                            <h2 class="price-display"><span class="price" id="PRICE_XUC"></span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>	
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong>BITCOIN CASH - BCH</strong>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/202330-BCH.jpg" alt="User Image">
+                        </div>
+                        <div>
+                            <h2 class="price-display"><span class="price" id="PRICE_BCH"></span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong>TRACKNETTOKEN - MTN</strong>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/313967-MTN.png" alt="User Image">
+                        </div>
+                        <div>
+                            <h2 class="price-display"><span class="price" id="PRICE_MTN"></span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong>EOS - EOS</strong>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/166503-EOS.png" alt="User Image">
+                        </div>
+                        <div>
+                            <h2 class="price-display"><span class="price" id="PRICE_EOS"></span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong>STELLAR - XLM</strong>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/4614-XLM.png" alt="User Image">
+                        </div>
+                        <div>
+                            <h2 class="price-display"><span class="price" id="PRICE_XLM"></span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header white">
+                        <strong>LITECOIN - LTC</strong>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="image m-3">
+                            <img class="user_avatar no-b no-p r-5" src="https://cryptocurrencies.net/assets/images/coins/3808-LTC.png" alt="User Image">
+                        </div>
+                        <div>
+                            <h2 class="price-display"><span class="price" id="PRICE_LTC"></span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        
+        
+
+	
+	<script src="assets/js/app.js"></script>
+    <script src="ccc-streamer-utilities.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="stream.js"></script>
+</body>
+</html>
